@@ -9,74 +9,81 @@ export default function Upload() {
   const [message, setMessage] = useState("");
 
   // 🔥 Main Upload Handler
-  async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  // inside your component in page.tsx — replace the existing handleUpload
+async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
+  const file = e.target.files?.[0];
+  if (!file) return;
 
-    console.log("📂 Selected file:", file);
+  setUploading(true);
+  setMessage("");
+  console.log("📂 Selected file:", file);
 
-    setUploading(true);
-    setMessage("");
+  // Prepare remote path
+  const fileExt = file.name.split(".").pop();
+  const fileName = `${Date.now()}.${fileExt}`;
+  const filePath = `uploads/${fileName}`;
+  console.log("⬆️ Uploading to Supabase at path:", filePath);
 
-    // ----------------------------------------------------------------------
-    // 1️⃣ Upload to Supabase Storage
-    // ----------------------------------------------------------------------
-    const fileExt = file.name.split(".").pop();
-    const fileName = `${Date.now()}.${fileExt}`;
-    const filePath = `uploads/${fileName}`;
+  // Upload to Supabase
+  const { data: uploadData, error: uploadError } = await supabase.storage
+    .from("documents")
+    .upload(filePath, file);
 
-    console.log("⬆️ Uploading to Supabase at path:", filePath);
+  if (uploadError) {
+    console.error("❌ Supabase upload error:", uploadError);
+    setMessage("❌ Upload failed (supabase).");
+    setUploading(false);
+    return;
+  }
+  console.log("📦 Supabase upload result:", uploadData);
+  console.log("✅ File uploaded successfully!");
 
-    const { data, error: uploadError } = await supabase.storage
-      .from("documents")
-      .upload(filePath, file);
+  // Notify backend (use mounted route path)
+  const payload = {
+    file_path: filePath,
+    filename: file.name,
+    mime_type: file.type,
+    file_size: file.size,
+    org_id: "TEMP_ORG",
+    uploader_id: "TEMP_USER",
+  };
 
-    console.log("📦 Supabase upload result:", data);
+  console.log("📨 Sending payload to backend /api/upload/upload-callback:", payload);
 
-    if (uploadError) {
-      console.error("❌ Supabase upload error:", uploadError);
-      setMessage("❌ Upload failed.");
-      setUploading(false);
-      return;
-    }
-
-    console.log("✅ File uploaded successfully!");
-
-    // ----------------------------------------------------------------------
-    // 2️⃣ Notify Backend (FastAPI)
-    // ----------------------------------------------------------------------
-    const payload = {
-      file_path: filePath,
-      filename: file.name,
-      mime_type: file.type,
-      file_size: file.size,
-      org_id: "TEMP_ORG", // replace later when auth added
-      uploader_id: "TEMP_USER",
-    };
-
-    console.log("📨 Sending payload to backend /upload-callback:", payload);
-
-    const response = await fetch("http://localhost:8000/upload-callback", {
+  try {
+    const response = await fetch("http://localhost:8000/api/upload/upload-callback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
+      // credentials: "include" // enable only if backend uses cookies/auth
     });
 
     console.log("🔎 Backend response status:", response.status);
 
+    // Attempt to parse JSON (may still be error HTML/plain)
+    let respData;
+    try {
+      respData = await response.json();
+    } catch (err) {
+      respData = await response.text();
+    }
+
     if (!response.ok) {
-      const respText = await response.text();
-      console.error("❌ Backend error:", respText);
+      console.error("❌ Backend error:", respData);
       setMessage("❌ Server rejected the upload metadata.");
       setUploading(false);
       return;
     }
 
-    console.log("🎉 Backend accepted the file!");
-
+    console.log("🎉 Backend accepted the file!", respData);
     setMessage("✅ Upload successful! Processing will start shortly.");
+  } catch (err) {
+    console.error("🚨 Network/Fetch error:", err);
+    setMessage("❌ Network error contacting backend.");
+  } finally {
     setUploading(false);
   }
+}
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">

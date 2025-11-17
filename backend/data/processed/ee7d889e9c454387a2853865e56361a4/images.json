@@ -1,0 +1,44 @@
+[
+  {
+    "page": 1,
+    "image_index": 0,
+    "filename": "DSL09.docx_p1_img0.jpeg",
+    "local_path": "backend\\data\\processed\\ee7d889e9c454387a2853865e56361a4\\DSL09.docx_p1_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 2,
+    "image_index": 0,
+    "filename": "DSL09.docx_p2_img0.png",
+    "local_path": "backend\\data\\processed\\ee7d889e9c454387a2853865e56361a4\\DSL09.docx_p2_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 2,
+    "image_index": 1,
+    "filename": "DSL09.docx_p2_img1.png",
+    "local_path": "backend\\data\\processed\\ee7d889e9c454387a2853865e56361a4\\DSL09.docx_p2_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 0,
+    "filename": "DSL09.docx_p3_img0.png",
+    "local_path": "backend\\data\\processed\\ee7d889e9c454387a2853865e56361a4\\DSL09.docx_p3_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 1,
+    "filename": "DSL09.docx_p3_img1.png",
+    "local_path": "backend\\data\\processed\\ee7d889e9c454387a2853865e56361a4\\DSL09.docx_p3_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 2,
+    "filename": "DSL09.docx_p3_img2.png",
+    "local_path": "backend\\data\\processed\\ee7d889e9c454387a2853865e56361a4\\DSL09.docx_p3_img2.png",
+    "bbox": null
+  }
+]

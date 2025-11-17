@@ -1,0 +1,590 @@
+[
+  {
+    "page": 1,
+    "image_index": 0,
+    "filename": "Unit IV_p1_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p1_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 2,
+    "image_index": 0,
+    "filename": "Unit IV_p2_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p2_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 0,
+    "filename": "Unit IV_p3_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p3_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 0,
+    "filename": "Unit IV_p4_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p4_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 1,
+    "filename": "Unit IV_p4_img1.jpeg",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p4_img1.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 5,
+    "image_index": 0,
+    "filename": "Unit IV_p5_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p5_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 6,
+    "image_index": 0,
+    "filename": "Unit IV_p6_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p6_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 6,
+    "image_index": 1,
+    "filename": "Unit IV_p6_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p6_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 7,
+    "image_index": 0,
+    "filename": "Unit IV_p7_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p7_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 8,
+    "image_index": 0,
+    "filename": "Unit IV_p8_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p8_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 9,
+    "image_index": 0,
+    "filename": "Unit IV_p9_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p9_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 10,
+    "image_index": 0,
+    "filename": "Unit IV_p10_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p10_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 10,
+    "image_index": 1,
+    "filename": "Unit IV_p10_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p10_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 10,
+    "image_index": 2,
+    "filename": "Unit IV_p10_img2.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p10_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 11,
+    "image_index": 0,
+    "filename": "Unit IV_p11_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p11_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 11,
+    "image_index": 1,
+    "filename": "Unit IV_p11_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p11_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 11,
+    "image_index": 2,
+    "filename": "Unit IV_p11_img2.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p11_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 12,
+    "image_index": 0,
+    "filename": "Unit IV_p12_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p12_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 0,
+    "filename": "Unit IV_p13_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p13_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 14,
+    "image_index": 0,
+    "filename": "Unit IV_p14_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p14_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 15,
+    "image_index": 0,
+    "filename": "Unit IV_p15_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p15_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 16,
+    "image_index": 0,
+    "filename": "Unit IV_p16_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p16_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 17,
+    "image_index": 0,
+    "filename": "Unit IV_p17_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p17_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 18,
+    "image_index": 0,
+    "filename": "Unit IV_p18_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p18_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 19,
+    "image_index": 0,
+    "filename": "Unit IV_p19_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p19_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 20,
+    "image_index": 0,
+    "filename": "Unit IV_p20_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p20_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 21,
+    "image_index": 0,
+    "filename": "Unit IV_p21_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p21_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 22,
+    "image_index": 0,
+    "filename": "Unit IV_p22_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p22_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 23,
+    "image_index": 0,
+    "filename": "Unit IV_p23_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p23_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 24,
+    "image_index": 0,
+    "filename": "Unit IV_p24_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p24_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 25,
+    "image_index": 0,
+    "filename": "Unit IV_p25_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p25_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 26,
+    "image_index": 0,
+    "filename": "Unit IV_p26_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p26_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 27,
+    "image_index": 0,
+    "filename": "Unit IV_p27_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p27_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 28,
+    "image_index": 0,
+    "filename": "Unit IV_p28_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p28_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 28,
+    "image_index": 1,
+    "filename": "Unit IV_p28_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p28_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 28,
+    "image_index": 2,
+    "filename": "Unit IV_p28_img2.jpeg",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p28_img2.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 29,
+    "image_index": 0,
+    "filename": "Unit IV_p29_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p29_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 30,
+    "image_index": 0,
+    "filename": "Unit IV_p30_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p30_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 30,
+    "image_index": 1,
+    "filename": "Unit IV_p30_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p30_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 30,
+    "image_index": 2,
+    "filename": "Unit IV_p30_img2.jpeg",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p30_img2.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 31,
+    "image_index": 0,
+    "filename": "Unit IV_p31_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p31_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 32,
+    "image_index": 0,
+    "filename": "Unit IV_p32_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p32_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 33,
+    "image_index": 0,
+    "filename": "Unit IV_p33_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p33_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 34,
+    "image_index": 0,
+    "filename": "Unit IV_p34_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p34_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 34,
+    "image_index": 1,
+    "filename": "Unit IV_p34_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p34_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 34,
+    "image_index": 2,
+    "filename": "Unit IV_p34_img2.jpeg",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p34_img2.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 35,
+    "image_index": 0,
+    "filename": "Unit IV_p35_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p35_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 36,
+    "image_index": 0,
+    "filename": "Unit IV_p36_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p36_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 37,
+    "image_index": 0,
+    "filename": "Unit IV_p37_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p37_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 38,
+    "image_index": 0,
+    "filename": "Unit IV_p38_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p38_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 39,
+    "image_index": 0,
+    "filename": "Unit IV_p39_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p39_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 40,
+    "image_index": 0,
+    "filename": "Unit IV_p40_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p40_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 41,
+    "image_index": 0,
+    "filename": "Unit IV_p41_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p41_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 42,
+    "image_index": 0,
+    "filename": "Unit IV_p42_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p42_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 43,
+    "image_index": 0,
+    "filename": "Unit IV_p43_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p43_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 44,
+    "image_index": 0,
+    "filename": "Unit IV_p44_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p44_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 45,
+    "image_index": 0,
+    "filename": "Unit IV_p45_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p45_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 45,
+    "image_index": 1,
+    "filename": "Unit IV_p45_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p45_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 45,
+    "image_index": 2,
+    "filename": "Unit IV_p45_img2.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p45_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 46,
+    "image_index": 0,
+    "filename": "Unit IV_p46_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p46_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 47,
+    "image_index": 0,
+    "filename": "Unit IV_p47_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p47_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 47,
+    "image_index": 1,
+    "filename": "Unit IV_p47_img1.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p47_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 47,
+    "image_index": 2,
+    "filename": "Unit IV_p47_img2.jpeg",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p47_img2.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 48,
+    "image_index": 0,
+    "filename": "Unit IV_p48_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p48_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 49,
+    "image_index": 0,
+    "filename": "Unit IV_p49_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p49_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 50,
+    "image_index": 0,
+    "filename": "Unit IV_p50_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p50_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 51,
+    "image_index": 0,
+    "filename": "Unit IV_p51_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p51_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 52,
+    "image_index": 0,
+    "filename": "Unit IV_p52_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p52_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 53,
+    "image_index": 0,
+    "filename": "Unit IV_p53_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p53_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 54,
+    "image_index": 0,
+    "filename": "Unit IV_p54_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p54_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 55,
+    "image_index": 0,
+    "filename": "Unit IV_p55_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p55_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 56,
+    "image_index": 0,
+    "filename": "Unit IV_p56_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p56_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 57,
+    "image_index": 0,
+    "filename": "Unit IV_p57_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p57_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 58,
+    "image_index": 0,
+    "filename": "Unit IV_p58_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p58_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 59,
+    "image_index": 0,
+    "filename": "Unit IV_p59_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p59_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 60,
+    "image_index": 0,
+    "filename": "Unit IV_p60_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p60_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 61,
+    "image_index": 0,
+    "filename": "Unit IV_p61_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p61_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 62,
+    "image_index": 0,
+    "filename": "Unit IV_p62_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p62_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 63,
+    "image_index": 0,
+    "filename": "Unit IV_p63_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p63_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 64,
+    "image_index": 0,
+    "filename": "Unit IV_p64_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p64_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 65,
+    "image_index": 0,
+    "filename": "Unit IV_p65_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p65_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 66,
+    "image_index": 0,
+    "filename": "Unit IV_p66_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p66_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 67,
+    "image_index": 0,
+    "filename": "Unit IV_p67_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p67_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 68,
+    "image_index": 0,
+    "filename": "Unit IV_p68_img0.png",
+    "local_path": "backend\\data\\processed\\24e1634499f64ffcaa9a716bb396c698\\Unit IV_p68_img0.png",
+    "bbox": null
+  }
+]

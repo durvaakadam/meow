@@ -1,0 +1,72 @@
+[
+  {
+    "page": 1,
+    "image_index": 0,
+    "filename": "DocAgent_p1_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p1_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 2,
+    "image_index": 0,
+    "filename": "DocAgent_p2_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p2_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 0,
+    "filename": "DocAgent_p3_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p3_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 0,
+    "filename": "DocAgent_p4_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p4_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 5,
+    "image_index": 0,
+    "filename": "DocAgent_p5_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p5_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 12,
+    "image_index": 0,
+    "filename": "DocAgent_p12_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p12_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 12,
+    "image_index": 1,
+    "filename": "DocAgent_p12_img1.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p12_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 0,
+    "filename": "DocAgent_p13_img0.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p13_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 1,
+    "filename": "DocAgent_p13_img1.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p13_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 2,
+    "filename": "DocAgent_p13_img2.png",
+    "local_path": "backend\\data\\processed\\2d2d7235c2de4795bbda32125775c978\\DocAgent_p13_img2.png",
+    "bbox": null
+  }
+]

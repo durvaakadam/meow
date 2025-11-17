@@ -36,3 +36,23 @@ async def upload_document(file: UploadFile = File(...)):
 async def list_documents():
     """List all documents"""
     return {"documents": documents_db, "total": len(documents_db)}
+
+
+
+
+@router.post("/upload-and-parse")
+async def upload_and_parse(file: UploadFile = File(...)):
+    # Step 1: Read uploaded file
+    file_bytes = await file.read()
+    
+    # Step 2: Upload to Supabase
+    supabase_path = upload_pdf_to_supabase(file_bytes, file.filename)
+    
+    # Step 3: Parse PDF directly from uploaded bytes
+    pages = parse_pdf_from_bytes(file_bytes)
+    
+    return {
+        "supabase_path": supabase_path,
+        "pages": pages,
+        "page_count": len(pages)
+    }
