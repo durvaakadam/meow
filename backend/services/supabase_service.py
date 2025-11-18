@@ -62,3 +62,5 @@ def insert_collection_record(data: dict):
     except Exception as e:
         print(f"ERROR inserting collection: {e}")
         return data
+    
+

@@ -1,0 +1,128 @@
+[
+  {
+    "page": 1,
+    "image_index": 0,
+    "filename": "Experiment 5_p1_img0.jpeg",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p1_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 1,
+    "image_index": 1,
+    "filename": "Experiment 5_p1_img1.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p1_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 2,
+    "image_index": 0,
+    "filename": "Experiment 5_p2_img0.jpeg",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p2_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 0,
+    "filename": "Experiment 5_p3_img0.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p3_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 1,
+    "filename": "Experiment 5_p3_img1.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p3_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 2,
+    "filename": "Experiment 5_p3_img2.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p3_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 3,
+    "filename": "Experiment 5_p3_img3.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p3_img3.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 4,
+    "filename": "Experiment 5_p3_img4.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p3_img4.png",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 5,
+    "filename": "Experiment 5_p3_img5.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p3_img5.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 0,
+    "filename": "Experiment 5_p4_img0.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p4_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 1,
+    "filename": "Experiment 5_p4_img1.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p4_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 2,
+    "filename": "Experiment 5_p4_img2.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p4_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 3,
+    "filename": "Experiment 5_p4_img3.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p4_img3.png",
+    "bbox": null
+  },
+  {
+    "page": 4,
+    "image_index": 4,
+    "filename": "Experiment 5_p4_img4.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p4_img4.png",
+    "bbox": null
+  },
+  {
+    "page": 5,
+    "image_index": 0,
+    "filename": "Experiment 5_p5_img0.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p5_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 5,
+    "image_index": 1,
+    "filename": "Experiment 5_p5_img1.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p5_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 5,
+    "image_index": 2,
+    "filename": "Experiment 5_p5_img2.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p5_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 6,
+    "image_index": 0,
+    "filename": "Experiment 5_p6_img0.png",
+    "local_path": "backend\\data\\processed\\ac9dd197853b43d59eeaa2376b5ffff6\\Experiment 5_p6_img0.png",
+    "bbox": null
+  }
+]

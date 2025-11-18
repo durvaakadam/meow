@@ -1,0 +1,58 @@
+[
+  {
+    "page": 1,
+    "image_index": 0,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p1_img0.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p1_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 0,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p3_img0.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p3_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 3,
+    "image_index": 1,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p3_img1.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p3_img1.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 8,
+    "image_index": 0,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p8_img0.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p8_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 9,
+    "image_index": 0,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p9_img0.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p9_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 0,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p13_img0.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p13_img0.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 1,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p13_img1.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p13_img1.jpeg",
+    "bbox": null
+  },
+  {
+    "page": 13,
+    "image_index": 2,
+    "filename": "DISPENZO 2.O ENDSEM (2)_p13_img2.jpeg",
+    "local_path": "backend\\data\\processed\\32687926682c4d73aceee7220ab83d6f\\DISPENZO 2.O ENDSEM (2)_p13_img2.jpeg",
+    "bbox": null
+  }
+]

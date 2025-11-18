@@ -1,0 +1,65 @@
+[
+  {
+    "page": 1,
+    "image_index": 0,
+    "filename": "MathScribe_Report.docx_p1_img0.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p1_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 9,
+    "image_index": 0,
+    "filename": "MathScribe_Report.docx_p9_img0.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p9_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 16,
+    "image_index": 0,
+    "filename": "MathScribe_Report.docx_p16_img0.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p16_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 16,
+    "image_index": 1,
+    "filename": "MathScribe_Report.docx_p16_img1.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p16_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 17,
+    "image_index": 0,
+    "filename": "MathScribe_Report.docx_p17_img0.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p17_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 17,
+    "image_index": 1,
+    "filename": "MathScribe_Report.docx_p17_img1.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p17_img1.png",
+    "bbox": null
+  },
+  {
+    "page": 17,
+    "image_index": 2,
+    "filename": "MathScribe_Report.docx_p17_img2.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p17_img2.png",
+    "bbox": null
+  },
+  {
+    "page": 18,
+    "image_index": 0,
+    "filename": "MathScribe_Report.docx_p18_img0.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p18_img0.png",
+    "bbox": null
+  },
+  {
+    "page": 18,
+    "image_index": 1,
+    "filename": "MathScribe_Report.docx_p18_img1.png",
+    "local_path": "backend\\data\\processed\\46d8f8d5f8944444bf465d5a8ffc8925\\MathScribe_Report.docx_p18_img1.png",
+    "bbox": null
+  }
+]

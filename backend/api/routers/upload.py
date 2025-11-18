@@ -22,7 +22,6 @@ from backend.services.supabase_service import (
     insert_collection_record,
     get_supabase
 )
-from backend.services.supabase_storage import download_bytes_from_storage, upload_bytes_to_storage
 
 router = APIRouter()
 
@@ -118,33 +117,45 @@ def reflow_paragraphs(text: str, maxlen: int = 1000) -> str:
     return "\n\n".join(paragraphs)
 
 
+
+
 # ----------------- main endpoint -----------------
 @router.post("/upload-callback")
 async def upload_callback(data: UploadCallback):
-    """
-    Flow:
-      - If ZIP: handle ZIP flow (download, re-upload zipUploaded, insert collection,
-                extract, upload extracted files to documents/uploads/, insert document rows)
-      - Else: treat as single file (PDF expected) and run parsing flow:
-          1) download original PDF bytes
-          2) write temp PDF
-          3) extract text & images (in thread)
-          4) create local processed folder and save parsed.json and images.json
-          5) upload parsed.json to PARSED_BUCKET and upload images to IMAGES_BUCKET
-          6) insert DB row with both local and remote paths/metadata
-    """
-
     # --------- ZIP handling branch ----------
+
     is_zip = (data.mime_type in ["application/zip", "application/x-zip-compressed"]) or data.filename.lower().endswith(".zip")
+
     if is_zip:
-        # 1) Download ZIP bytes from storage (using your storage helper)
+        zip_filename = Path(data.filename).name                   # e.g. mycase.zip
+        zip_stem = Path(data.filename).stem                       # e.g. mycase
+        zip_uploaded_path = f"zipUploaded/{zip_filename}"         # final canonical location
+
+        # 1) Download original uploaded ZIP (wherever frontend puts it)
         try:
-            zip_bytes = await asyncio.to_thread(download_bytes_from_storage, DOCUMENTS_BUCKET, data.file_path)
+            zip_bytes = await asyncio.to_thread(
+                download_bytes_from_storage,
+                DOCUMENTS_BUCKET,
+                data.file_path    # may be temp path
+            )
         except Exception as e:
             traceback.print_exc()
-            raise HTTPException(status_code=500, detail=f"Failed to download ZIP from storage: {e}")
+            raise HTTPException(status_code=500, detail=f"Failed to download ZIP: {e}")
 
-        # 2) Save temp zip file
+        # 2) Re-upload ZIP to zipUploaded/<filename> (NEEDED to ensure canonical location)
+        try:
+            await asyncio.to_thread(
+                upload_bytes_to_storage,
+                DOCUMENTS_BUCKET,
+                zip_uploaded_path,
+                zip_bytes,
+                "application/zip"
+            )
+        except Exception as e:
+            traceback.print_exc()
+            raise HTTPException(status_code=500, detail=f"Failed to save ZIP into zipUploaded/: {e}")
+
+        # 3) Save ZIP to temp
         try:
             tmp_zip_fd, tmp_zip_path = tempfile.mkstemp(suffix=".zip")
             os.close(tmp_zip_fd)
@@ -154,32 +165,11 @@ async def upload_callback(data: UploadCallback):
             traceback.print_exc()
             raise HTTPException(status_code=500, detail=f"Failed to write temp ZIP: {e}")
 
-        # 3) Re-upload original ZIP to documents/zipUploaded/<filename>
-        zip_storage_path = f"zipUploaded/{Path(data.filename).name}"
-        try:
-            await asyncio.to_thread(upload_bytes_to_storage, DOCUMENTS_BUCKET, zip_storage_path, zip_bytes, "application/zip")
-        except Exception as e:
-            traceback.print_exc()
-            # cleanup and fail
-            try:
-                os.remove(tmp_zip_path)
-            except Exception:
-                pass
-            raise HTTPException(status_code=500, detail=f"Failed to re-upload ZIP to storage: {e}")
-
-        # 4) Optionally remove original uploaded file from storage (best-effort)
-        try:
-            supabase = get_supabase()
-            await asyncio.to_thread(supabase.storage.from_("documents").remove, [data.file_path])
-        except Exception:
-            # not fatal; log and continue
-            traceback.print_exc()
-
-        # 5) Insert collection record
+        # 4) Insert collection row with CORRECT path
         try:
             collection = await asyncio.to_thread(insert_collection_record, {
-                "name": data.filename,
-                "file_path": zip_storage_path,
+                "name": zip_filename,
+                "file_path": zip_uploaded_path,    # FIXED
                 "org_id": data.org_id,
                 "uploader_id": data.uploader_id
             })
@@ -189,50 +179,57 @@ async def upload_callback(data: UploadCallback):
 
         collection_id = collection.get("id")
 
-        # 6) Extract ZIP into a temp dir
+        # 5) Extract ZIP
         extracted_docs = []
         temp_extract_dir = tempfile.mkdtemp(prefix="upload_extract_")
+
         try:
             with zipfile.ZipFile(tmp_zip_path, 'r') as z:
                 z.extractall(temp_extract_dir)
         except Exception as e:
             traceback.print_exc()
-            # cleanup and return error
-            try:
-                shutil.rmtree(temp_extract_dir, ignore_errors=True)
-                os.remove(tmp_zip_path)
-            except Exception:
-                pass
+            shutil.rmtree(temp_extract_dir, ignore_errors=True)
+            os.remove(tmp_zip_path)
             raise HTTPException(status_code=500, detail=f"Failed to extract ZIP: {e}")
-
-        # 7) Walk extracted files and upload & insert records
+        
+        zip_stem = Path(data.filename).stem 
+       
+        
+        # 6) Walk extracted files
         try:
             for root, dirs, files in os.walk(temp_extract_dir):
                 for file in files:
-                    # skip nested zips by default (safe)
+
+                    # skip nested zips
                     if file.lower().endswith(".zip"):
-                        # optionally we could upload nested zips as files, or extract recursively
-                        # for safety we skip recursive extraction here
                         continue
 
                     local_path = os.path.join(root, file)
-                    relative_path = os.path.relpath(local_path, temp_extract_dir).replace("\\", "/")
-                    storage_path = f"uploads/{relative_path}"
+
+                    # relative path inside the zip
+                    rel_inside_zip = os.path.relpath(local_path, temp_extract_dir).replace("\\", "/")
+
+                    # FINAL FIXED STORAGE PATH:
+                    storage_path = f"uploads/{zip_stem}/{rel_inside_zip}"
 
                     try:
-                        # read bytes
                         with open(local_path, "rb") as fh:
                             file_bytes = fh.read()
 
-                        # guess mime type
                         mime_type, _ = mimetypes.guess_type(local_path)
                         if not mime_type:
                             mime_type = "application/octet-stream"
 
                         # upload extracted file
-                        await asyncio.to_thread(upload_bytes_to_storage, DOCUMENTS_BUCKET, storage_path, file_bytes, mime_type)
+                        await asyncio.to_thread(
+                            upload_bytes_to_storage,
+                            DOCUMENTS_BUCKET,
+                            storage_path,
+                            file_bytes,
+                            mime_type
+                        )
 
-                        # create document record
+                        # insert document table row
                         doc_record = {
                             "collection_id": collection_id,
                             "file_path": storage_path,
@@ -245,6 +242,97 @@ async def upload_callback(data: UploadCallback):
                         }
                         inserted = await asyncio.to_thread(insert_document_record, doc_record)
                         extracted_docs.append(inserted)
+                        
+                        # >>> ADDED: run full parsing only for PDFs
+                        # -----------------------------------------------------
+                        if file.lower().endswith(".pdf"):
+
+                            # extract text
+                            text_content = await asyncio.to_thread(extract_text, local_path)
+                            text_content = dehyphenate_text(text_content)
+                            text_content = reflow_paragraphs(text_content)
+                            text_chunks = await asyncio.to_thread(chunk_text, text_content)
+
+                            # extract images with metadata
+                            images_meta_raw = await asyncio.to_thread(extract_images_with_metadata, local_path)
+
+                            # create local processed folder
+                            uid = uuid.uuid4().hex
+                            local_doc_dir = LOCAL_PROCESSED_ROOT / uid
+                            local_doc_dir.mkdir(parents=True, exist_ok=True)
+
+                            # build parsed.json
+                            parsed_json = {
+                                "file_path": storage_path,
+                                "filename": file,
+                                "mime_type": mime_type,
+                                "chunks": text_chunks,
+                                "full_text_preview": text_content[:10000]
+                            }
+                            parsed_json_path = local_doc_dir / "parsed.json"
+                            parsed_json_path.write_text(json.dumps(parsed_json, ensure_ascii=False, indent=2), encoding="utf-8")
+
+                            # handle images locally
+                            images_meta = []
+                            for img in images_meta_raw:
+                                src = Path(img["local_path"])
+                                if not src.exists():
+                                    continue
+                                dst = local_doc_dir / src.name
+                                src.replace(dst)
+                                images_meta.append({
+                                    "page": img["page"],
+                                    "image_index": img["image_index"],
+                                    "filename": img["filename"],
+                                    "local_path": str(dst),
+                                    "bbox": img.get("bbox")
+                                })
+
+                            images_json_path = local_doc_dir / "images.json"
+                            images_json_path.write_text(json.dumps(images_meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+                            # upload parsed.json to PARSED bucket
+                            parsed_remote_name = f"parsed/{uid}.json"
+                            await asyncio.to_thread(
+                                upload_bytes_to_storage,
+                                PARSED_BUCKET,
+                                parsed_remote_name,
+                                parsed_json_path.read_bytes(),
+                                "application/json"
+                            )
+
+                            # upload each image to IMAGES bucket
+                            uploaded_images_meta = []
+                            for img in images_meta:
+                                local_img_path = Path(img["local_path"])
+                                remote_img_path = f"images/{uid}/{local_img_path.name}"
+
+                                mime, _ = mimetypes.guess_type(local_img_path)
+                                if not mime:
+                                    mime = "image/png"
+
+                                await asyncio.to_thread(
+                                    upload_bytes_to_storage,
+                                    IMAGES_BUCKET,
+                                    remote_img_path,
+                                    local_img_path.read_bytes(),
+                                    mime
+                                )
+
+                                img["remote_path"] = remote_img_path
+                                uploaded_images_meta.append(img)
+
+                            # finally update DB row → parsed
+                            inserted["status"] = "parsed"
+                            inserted["parsed_json"] = parsed_json
+                            inserted["parsed_json_remote_path"] = parsed_remote_name
+                            inserted["parsed_json_local_path"] = str(parsed_json_path)
+                            inserted["images"] = uploaded_images_meta
+                            inserted["images_local_path"] = str(local_doc_dir)
+
+                        # >>> END PDF PARSING ADDITION
+                        # -----------------------------------------------------
+
                     except Exception as e:
                         traceback.print_exc()
                         extracted_docs.append({
@@ -252,16 +340,11 @@ async def upload_callback(data: UploadCallback):
                             "local_path": local_path,
                             "error": str(e)
                         })
+
         finally:
-            # cleanup
-            try:
-                shutil.rmtree(temp_extract_dir, ignore_errors=True)
-            except Exception:
-                pass
-            try:
-                os.remove(tmp_zip_path)
-            except Exception:
-                pass
+            shutil.rmtree(temp_extract_dir, ignore_errors=True)
+            try: os.remove(tmp_zip_path)
+            except: pass
 
         return {
             "status": "ok",
@@ -269,6 +352,7 @@ async def upload_callback(data: UploadCallback):
             "collection": collection,
             "documents": extracted_docs
         }
+
 
     # --------- NON-ZIP (assume single file, e.g., PDF) ----------
     # 1) Download file bytes from supabase storage
